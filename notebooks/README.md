@@ -1,1 +1,1 @@
-# cse280-02F21
+# cse280-course-notebooks
