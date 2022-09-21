@@ -13322,9 +13322,10 @@ Sample solutions are provided in order to help you <strong>learn</strong>. The p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The domain of discourse for this exercise is the set of all people, and:\
+<p>The domain for this exercise is the set of all people, and:\
 $P(x)$ = $\ x$ is older than 21\
 $S(x)$ = $\ x$ is a student</p>
+<p>(Remember the <strong>domain</strong> of a variable in a predicate is the set of all possible values for the variable.)</p>
 <p>Express in good English the following statements:</p>
 <ol>
 <li>$\exists x\ P(x)$.</li>
@@ -13378,7 +13379,7 @@ $S(x)$ = $\ x$ is a student</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The domain of discourse for this exercise is the set of all people, and:</p>
+<p>The domain for this exercise is the set of all people, and:</p>
 <p>$F(x)$ = $\ x$ is a friend\
 $C(x)$ = $\ x$ is cool\
 $S(x)$ = $\ x$ is a student\
@@ -13488,8 +13489,9 @@ $N(x)$ = $\ x$ is from Nepal</p>
 <p>Test this function with several different values for <code>x</code> to make sure it is working the way you expect.</p>
 <p>Notice that <code>is_even(x)</code> is a predicate. In other words, it is a function that returns <code>True</code> if the input <code>x</code> has the property defined by the predicate.</p>
 </li>
-
-<li><p></p><p>Now write a function called <code>forall</code> that takes two parameters, <code>p</code> and <code>s</code>, where <code>p</code> is a predicate and <code>s</code> is a list of numbers. <code>forall</code> should return <code>True</code> if every item in <code>s</code> has the property <code>p</code>.</p>
+</ol>
+<ol>
+<li><p>Now write a function called <code>forall</code> that takes two parameters, <code>p</code> and <code>s</code>, where <code>p</code> is a predicate and <code>s</code> is a list of numbers. <code>forall</code> should return <code>True</code> if every item in <code>s</code> has the property <code>p</code>.</p>
 <p>Test the <code>forall</code> function by passing in your <code>is_even</code> function as the first argument and the list <code>s = [2, 4, 6, 8, 10]</code> as the second argument. The result should be <code>True</code> because every number in <code>s</code> is even.</p>
 <p>Then test the <code>forall</code> function by passing in your <code>is_even</code> function with the list <code>s = [1, 2, 3, 4, 5]</code>. The result should be <code>False</code>, because not <em>every</em> number in <code>s</code> is even.</p>
 </li>
@@ -13616,6 +13618,7 @@ $N(x)$ = $\ x$ is from Nepal</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In this problem, the domain is the integers <code>[-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]</code>.</p>
+<p>(Remember the <strong>domain</strong> of a variable in a predicate is the set of all possible values for the variable.)</p>
 <p>Determine the truth value of each of the following:</p>
 <ol>
 <li><p>$\forall x (\texttt{x is odd})$</p>
@@ -13640,6 +13643,12 @@ $N(x)$ = $\ x$ is from Nepal</p>
 </li>
 </ol>
 <p>Then use your <code>forall</code> and <code>forsome</code> functions to determine the truth value of each statement. You will need to write a predicate function for each one, similar to the <code>is_even</code> function you wrote previously. (You are encouraged to use <em>lambda</em> functions, but you may also use regular named functions)</p>
+<p>Here's an example of using a <em>lambda</em> function for the first one:</p>
+<p>$\forall x (\texttt{x is odd})$</p>
+<p>In Python:</p>
+
+<pre><code>  domain = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+  print(forall(lambda x: x % 2, domain)) # prints True or False</code></pre>
 
 </div>
 </div>
