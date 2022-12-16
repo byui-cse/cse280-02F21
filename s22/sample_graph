@@ -1,0 +1,43 @@
+
+graph { 
+    layout=neato;
+    node [shape=circle];
+    a [color=red];
+    b [color=blue];
+    c [color=green];
+    d [color=blue];
+    e [color=green];
+    f [color=blue];
+    g [color=red];
+    h [color=green];
+    i [color=red];
+    j [color=green];
+    k [color=yellow];
+    l [color=red];
+    m [color=blue];
+    a--b;
+    a--c;
+    a--d;
+    a--e;
+    b--c;
+    b--g;
+    b--j;
+    c--d;
+    c--f;
+    c--g;
+    d--e;
+    d--i;
+    d--h;
+    e--i;
+    f--g;
+    f--h;
+    f--k;
+    g--j;
+    h--i;
+    h--k;
+    i--k;
+    i--m;
+    j--l;
+    k--l;
+    k--m;
+}
