@@ -13158,10 +13158,70 @@ Sample solutions are provided in order to help you <strong>learn</strong>. The p
 <li>$p \lor q$</li>
 <li>$\lnot p \lor q$</li>
 <li>$p \land \lnot q$</li>
-<li>$p \land (q \oplus \lnot r)$</li>
-<li>$p \lor (\lnot q \oplus \lnot r)$</li>
 </ol>
+<p>This is a chance to practice using either LaTeX or Markdown to construct tables. Just "Google" it!</p>
+<p>Or you can draw them by hand, then take a picture. The point is to practice creating them. You may create a single large truth table or six smaller truth tables.</p>
+<p>(If you take a picture, you can add it to Colab by opening a new <strong>text</strong> cell, then click on the "Insert Image" button)</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here is an example of how to create a table using Markdown (double-click on cell to see source):</p>
+<table>
+<thead><tr>
+<th>p</th>
+<th>q</th>
+<th style="text-align:center">p $\land$ q</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>T</td>
+<td style="text-align:center">T</td>
+</tr>
+<tr>
+<td>T</td>
+<td>F</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>F</td>
+<td style="text-align:center">F</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>---</code> and <code>:-:</code> parts of the table control the column alignment. <code>:-:</code> tells the column to be centered.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And this is how to create a table using LaTeX:
+$$
+\begin{array}{|r|r|c|}
+\hline
+p &amp; q &amp; p \land q\\
+\hline
+T&amp;T&amp;T\\
+T&amp;F&amp;F\\
+F&amp;T&amp;F\\
+F&amp;F&amp;F\\
+\hline
+\end{array}
+$$</p>
+<p>The <code>|r|r|c|</code> part controls each column's alignment. In this case: right, right, center. The <code>$$</code> at the beginning and end allow multi-line LaTeX code. Code set in <code>$$</code> blocks will be centered on the page.</p>
 
 </div>
 </div>
@@ -13176,8 +13236,7 @@ Sample solutions are provided in order to help you <strong>learn</strong>. The p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Python has built in logical operators for <strong>or</strong>, <strong>and</strong>, and <strong>not</strong>. Using these operators, write a Python function called <code>xor</code> to implement the <strong>exclusive or</strong> operation. Your <code>xor</code> function should take two arguments.</p>
-<p>After you implement your <code>xor</code> function, run the following code, which should result in a truth table for exclusive or.</p>
+<p>Python has built in logical operators for <strong>or</strong>, <strong>and</strong>, and <strong>not</strong>. Using these operators, write a Python function called <code>xor</code> to implement the <strong>exclusive or</strong> operation. Your <code>xor</code> function should take two arguments. (Use the code block below and replace the part that says "<code># Your code here</code>")</p>
 
 </div>
 </div>
@@ -13191,10 +13250,27 @@ Sample solutions are provided in order to help you <strong>learn</strong>. The p
 <span class="k">def</span> <span class="nf">xor</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
     <span class="c1"># Your code here</span>
     <span class="k">pass</span>
+</pre></div>
 
+    </div>
+</div>
+</div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After creating your <code>xor</code> function, run the following code block, which should result in a truth table for <strong>exclusive or</strong>.</p>
 
-<span class="c1"># Print a truth table for p xor q</span>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Print a truth table for p xor q</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p       q       p xor q&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="n">q</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="n">xor</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">)</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -13229,8 +13305,8 @@ Sample solutions are provided in order to help you <strong>learn</strong>. The p
 <li>$p \lor q$</li>
 <li>$\lnot p \lor q$</li>
 <li>$p \land \lnot q$</li>
-<li>$p \land (q \oplus \lnot r)$</li>
-<li>$p \lor (\lnot q \oplus \lnot r)$</li>
+<li>$p \oplus \lnot q$</li>
+<li>$\lnot p \oplus \lnot q$</li>
 </ol>
 <p>Compare your Python result with the tables you created in Exercise 1.3.</p>
 <p>You may need to use the <code>xor</code> function you created previously.</p>
@@ -13325,38 +13401,6 @@ $</p>
 <li><p>$\begin{array}{|r|r|c|}\hline p &amp; q &amp; \lnot p \lor q\\ \hline \hline 0 &amp; 0 &amp; 1\\ 0 &amp; 1 &amp; 1\\ 1 &amp; 0 &amp; 0\\ 1 &amp; 1 &amp; 1\\ \hline\end{array}$</p>
 </li>
 <li><p>$\begin{array}{|r|r|c|}\hline p &amp; q &amp; p \land \lnot q\\ \hline \hline 0 &amp; 0 &amp; 0\\ 0 &amp; 1 &amp; 0\\ 1 &amp; 0 &amp; 1\\ 1 &amp; 1 &amp; 0\\ \hline\end{array}$</p>
-</li>
-<li><p>$\begin{array}{|r|r|r|r|r|r|}
-\hline
-p &amp; \land &amp; (q &amp; \oplus &amp; \lnot &amp; r)\\
-\hline
-\hline
-0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\
-0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0\\
-0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1\\
-1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0\\
-1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\
-1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0\\
-1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 1\\
-\hline
-\end{array}$</p>
-</li>
-<li><p>$\begin{array}{|r|r|r|r|r|}
-\hline
-p &amp; \lor &amp; (\lnot q &amp; \oplus &amp; \lnot r)\\
-\hline
-\hline
-0 &amp; 0 &amp; 1 &amp; 0 &amp; 1\\
-0 &amp; 1 &amp; 1 &amp; 1 &amp; 0\\
-0 &amp; 1 &amp; 0 &amp; 1 &amp; 1\\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
-1 &amp; 1 &amp; 1 &amp; 0 &amp; 1\\
-1 &amp; 1 &amp; 1 &amp; 1 &amp; 0\\
-1 &amp; 1 &amp; 0 &amp; 1 &amp; 1\\
-1 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
-\hline
-\end{array}$</p>
 </li>
 </ol>
 <p>A few examples using Markdown:</p>
@@ -13469,13 +13513,14 @@ p &amp; \lor &amp; (\lnot q &amp; \oplus &amp; \lnot r)\\
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">xor</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
-    <span class="c1"># return (p and not q) or (q and not p)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">p</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">q</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">q</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">p</span><span class="p">)</span>
     <span class="c1"># return p != q # another way</span>
-    <span class="k">return</span> <span class="ow">not</span> <span class="n">p</span> <span class="k">if</span> <span class="n">q</span> <span class="k">else</span> <span class="n">p</span>   <span class="c1"># another way</span>
+    <span class="c1"># return not (p == q)  # another way</span>
+    <span class="c1">#return not p if q else p   # another way</span>
 
 <span class="c1"># Another way, using a lambda function</span>
 <span class="n">xor</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">:</span> <span class="n">p</span> <span class="o">!=</span> <span class="n">q</span>
@@ -13498,10 +13543,10 @@ p &amp; \lor &amp; (\lnot q &amp; \oplus &amp; \lnot r)\\
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p       q       r       not p or q   p and not q    p and (q xor not r)    p or (not q xor not r)&#39;</span><span class="p">)</span>
-<span class="n">values</span> <span class="o">=</span> <span class="p">[(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]]</span>
-<span class="k">for</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">)</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="n">q</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="n">r</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="ow">not</span> <span class="n">p</span> <span class="ow">or</span> <span class="n">q</span><span class="si">!s:</span><span class="s1">&lt;13</span><span class="si">}{</span><span class="n">p</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">q</span><span class="si">!s:</span><span class="s1">&lt;15</span><span class="si">}{</span><span class="n">p</span> <span class="ow">and</span> <span class="p">(</span><span class="n">xor</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="ow">not</span> <span class="n">r</span><span class="p">))</span><span class="si">!s:</span><span class="s1">&lt;23</span><span class="si">}{</span><span class="n">p</span> <span class="ow">or</span> <span class="p">(</span><span class="n">xor</span><span class="p">(</span><span class="ow">not</span> <span class="n">q</span><span class="p">,</span> <span class="ow">not</span> <span class="n">r</span><span class="p">))</span><span class="si">!s:</span><span class="s1">&lt;10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p       q       not p or q   p and not q    p xor not q            not p xor not q&#39;</span><span class="p">)</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]]</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">)</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="n">q</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="ow">not</span> <span class="n">p</span> <span class="ow">or</span> <span class="n">q</span><span class="si">!s:</span><span class="s1">&lt;13</span><span class="si">}{</span><span class="n">p</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">q</span><span class="si">!s:</span><span class="s1">&lt;15</span><span class="si">}{</span><span class="n">xor</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="ow">not</span> <span class="n">q</span><span class="p">)</span><span class="si">!s:</span><span class="s1">&lt;23</span><span class="si">}{</span><span class="n">xor</span><span class="p">(</span><span class="ow">not</span> <span class="n">p</span><span class="p">,</span> <span class="ow">not</span> <span class="n">q</span><span class="p">)</span><span class="si">!s:</span><span class="s1">&lt;10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>

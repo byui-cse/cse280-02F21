@@ -13089,7 +13089,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Homework-2---Conditionals,-Predicates,-&amp;-Quantifiers">Homework 2 - Conditionals, Predicates, &amp; Quantifiers<a class="anchor-link" href="#Homework-2---Conditionals,-Predicates,-&amp;-Quantifiers">&#182;</a></h1>
+<h1 id="Homework-2---More-Logic-and-Conditionals">Homework 2 - More Logic and Conditionals<a class="anchor-link" href="#Homework-2---More-Logic-and-Conditionals">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13168,7 +13168,7 @@ Sample solutions are provided in order to help you <strong>learn</strong>. The p
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let $p$ be the proposition &ldquo;You applied for college admission.&rdquo; and let $q$ be the proposition &ldquo;You were accepted.&rdquo;</p>
-<p>Express the following English sentences as symbolic compound propositions using the logical conditional (or biconditional) connective.</p>
+<p>Express the following English sentences as symbolic compound propositions using the logical <strong>conditional</strong> (or biconditional) connective.</p>
 <ol>
 <li>Your applying for college admission is necessary for your being accepted.</li>
 <li>Your being accepted is a sufficient condition for your applying for college admission.</li>
@@ -13188,7 +13188,7 @@ Sample solutions are provided in order to help you <strong>learn</strong>. The p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Write Python functions to implement the conditional operator "$\rightarrow$" (implies) and the biconditional operator "$\leftrightarrow$" (if and only if, frequently written as "iff").</p>
+<p>Write Python functions to implement the <strong>conditional</strong> operator "$\rightarrow$" (implies) and the <strong>biconditional</strong> operator "$\leftrightarrow$" (if and only if, frequently written as "iff").</p>
 <p>In other words, complete these functions:</p>
 
 </div>
@@ -13269,8 +13269,8 @@ Sample solutions are provided in order to help you <strong>learn</strong>. The p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The Boolean operators <code>and</code>, <code>or</code>, and <code>not</code> are built into Python. This is an exercise in implementing these operators arithmetically.</p>
-<p>Your task is to implement the <code>not1</code>, <code>or1</code>, and <code>and1</code> functions below, <strong>arithmetically</strong> (i.e., do <em>not</em> the built-in Python <code>and</code>, <code>or</code>, <code>not</code>, or <code>if</code>). Use <strong>only</strong> the operators +, -, and *. The inputs to these functions will be zeros or ones only, with zero representing False and one representing True.</p>
+<p>The Boolean operators <code>and</code>, <code>or</code>, and <code>not</code> are built into Python. This is an exercise in implementing these operators arithmetically (i.e., using <code>-</code>, <code>+</code>, and <code>*</code>).</p>
+<p>Your task is to implement the <code>not1</code>, <code>or1</code>, and <code>and1</code> functions below, <strong>arithmetically</strong> (i.e., do <em>not</em> the built-in Python <code>and</code>, <code>or</code>, <code>not</code>, or <code>if</code>). Use <strong>only</strong> the operators +, -, and *. The inputs to these functions will be zeros or ones only, with zero representing False and one representing True. The outputs to these functions will be zero or one only (rather than True or False).</p>
 <p>You'll know you got it right if the resulting test code returns True for all three functions.</p>
 
 </div>
@@ -13322,49 +13322,14 @@ Sample solutions are provided in order to help you <strong>learn</strong>. The p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The domain for this exercise is the set of all people, and:\
-$P(x)$ = $\ x$ is older than 21\
-$S(x)$ = $\ x$ is a student</p>
-<p>(Remember the <strong>domain</strong> of a variable in a predicate is the set of all possible values for the variable.)</p>
-<p>Express in good English the following statements:</p>
+<p>Using the operations you created in the previous exercise (<code>and1</code>, <code>or1</code>, and <code>not1</code>), use Python to generate a truth table for the following propositions:</p>
 <ol>
-<li>$\exists x\ P(x)$.</li>
-<li>$\forall x\ P(x)$.</li>
-<li>$\exists x\ \lnot P(x)$.</li>
-<li>$\forall x\ \lnot P(x)$.</li>
-<li>$\exists x\ S(x)$.</li>
-<li>$\forall x\ S(x)$.</li>
-<li>$\lnot \exists x\ S(x)$.</li>
-<li>$\exists x\ \lnot S(x)$.</li>
-<li>$\lnot \forall x\ \lnot S(x)$.</li>
-<li>$\forall x\ \lnot S(x)$.</li>
+<li>$p \land q$</li>
+<li>$p \lor q$</li>
+<li>$\lnot p \lor q$</li>
+<li>$p \land \lnot q$</li>
 </ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hints:">Hints:<a class="anchor-link" href="#Hints:">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Don't use the word 'exists'.</li>
-<li>Don't use the word 'all'.</li>
-<li>Use the word `someone'.</li>
-<li>'No one' sounds better than 'Everyone is not'.</li>
-<li>'Some' \&lt;something&gt; 'is a' \&lt;something else&gt;.</li>
-<li>Start with 'Everyone'.</li>
-<li>Start with 'There is'.</li>
-<li>Start with 'There is'</li>
-<li>Start with 'No all'.</li>
-<li>Start with 'No one'.</li>
-</ol>
+<p>Verify your <code>and1</code>, <code>or1</code>, and <code>not1</code> functions are working correctly by manually checking each truth table.</p>
 
 </div>
 </div>
@@ -13379,46 +13344,19 @@ $S(x)$ = $\ x$ is a student</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The domain for this exercise is the set of all people, and:</p>
-<p>$F(x)$ = $\ x$ is a friend\
-$C(x)$ = $\ x$ is cool\
-$S(x)$ = $\ x$ is a student\
-$N(x)$ = $\ x$ is from Nepal</p>
-<p>Express in good English the following statements:</p>
+<p>Explore the relationship between Conditional, Converse, Inverse, and Contrapositive by constructing a truth table to verify the following equivalences. You may construct them by hand, by using LaTeX or Markdown, or by using Python.</p>
 <ol>
-<li>$\forall x\ (F(x) \rightarrow C(x))\ $</li>
-<li>$\exists x\ (F(x) \land C(x))\ $</li>
-<li>$\forall x\ (F(x) \land C(x))\ $</li>
-<li>$\exists x\ (F(x) \rightarrow C(x))\ $</li>
-<li>$\forall x\ (S(x) \rightarrow N(x))\ $</li>
-<li>$\exists x\ (S(x) \rightarrow N(x))\ $</li>
-<li>$\forall x\ (S(x) \land N(x))\ $</li>
-<li>$\exists x\ (S(x) \land N(x))\ $</li>
+<li><p>Conditional and its contrapositive: $p \rightarrow q \equiv \lnot q \rightarrow \lnot p$</p>
+</li>
+<li><p>Conditional and a disjunction: $p \rightarrow q \equiv \lnot p \lor q$</p>
+</li>
+<li><p>Inverse and Converse: $\lnot p \rightarrow \lnot q \equiv q \rightarrow p$</p>
+</li>
+<li><p>Negation of a conditional: $\lnot(p \rightarrow q) \equiv (p \land \lnot q)$</p>
+</li>
 </ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hints">Hints<a class="anchor-link" href="#Hints">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Start with 'All'.</li>
-<li>Start with 'Some'.</li>
-<li>Start with 'Everyone'.</li>
-<li>Start with 'Some'.</li>
-<li>Start with 'All'.</li>
-<li>Start with 'Someone' and use 'if' and 'then'.</li>
-<li>Start with 'Everyone'.</li>
-<li>'Some student ...'.</li>
-</ol>
+<p>Is the negation of a conditional equivalent to negating each of the terms? In other words is the following equivalence true?</p>
+<p>$\lnot(p \rightarrow q) \equiv \lnot p \rightarrow \lnot q$</p>
 
 </div>
 </div>
@@ -13433,42 +13371,16 @@ $N(x)$ = $\ x$ is from Nepal</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Translate the following statements into logical expressions using predicates, quantifiers, and logical connectives:</p>
+<p>Give the inverse, contrapositive, and converse for each of the following statements:</p>
 <ol>
-<li>Everyone's a critic.</li>
-<li>No one is perfect.</li>
-<li>At least one of your friends is perfect.</li>
-<li>All of your friends are critics.</li>
-<li>Everyone is a critic or someone is your friend.</li>
-<li>No one is a critic and everyone is your friend.</li>
-<li>Some state has no neighboring states.</li>
-<li>Whenever there is an error, at least one error message is displayed.</li>
-<li>All the programs have been scanned, but at least one program has a virus.</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hints">Hints<a class="anchor-link" href="#Hints">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Use the predicates C (is a Critic), P (is Perfect), and F (is your Friend).</li>
-<li>Remember to push the negation sign to the right of the quantifier (and change the flavor of the quantifier).</li>
-<li>Remember which connective to use with the existential quantifier?</li>
-<li>Remember which connective to use with the universal quantifier?</li>
-<li>This looks like the disjunction of two quantified statements.</li>
-<li>This looks like the conjunction of two quantified statements, one of them negated.</li>
-<li>Use a unary <em>and</em> a binary predicate.</li>
-<li>There are two different domains at play here.</li>
-<li>Use three predicates with programs as their domain.</li>
+<li><p>If Bob got an A on the final exam, then Bob passed the class.</p>
+</li>
+<li><p>If you complete your homework, then you will pass the exam.</p>
+</li>
+<li><p>If you do not study, then you will not pass the exam.</p>
+</li>
+<li><p>If you are 46" tall, then you can ride the rollercoaster.</p>
+</li>
 </ol>
 
 </div>
@@ -13484,171 +13396,16 @@ $N(x)$ = $\ x$ is from Nepal</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Given the following propositions:</p>
+<p>$p$:  \
+$q$:  \
+$r$:</p>
+<p>Translate each English sentence into a logical expression. Then negate the entire logical expression using parenthesis and the negation operation. Apply De Morgan's law to the resulting expression and translate the final logical expression back into English. Show all steps.</p>
+<p>1.</p>
 <ol>
-<li><p>Write a function <code>is_even(x)</code> that returns <code>True</code> if <code>x</code> is even.</p>
-<p>Test this function with several different values for <code>x</code> to make sure it is working the way you expect.</p>
-<p>Notice that <code>is_even(x)</code> is a predicate. In other words, it is a function that returns <code>True</code> if the input <code>x</code> has the property defined by the predicate.</p>
+<li><p>3.</p>
 </li>
 </ol>
-<ol>
-<li><p>Now write a function called <code>forall</code> that takes two parameters, <code>p</code> and <code>s</code>, where <code>p</code> is a predicate and <code>s</code> is a list of numbers. <code>forall</code> should return <code>True</code> if every item in <code>s</code> has the property <code>p</code>.</p>
-<p>Test the <code>forall</code> function by passing in your <code>is_even</code> function as the first argument and the list <code>s = [2, 4, 6, 8, 10]</code> as the second argument. The result should be <code>True</code> because every number in <code>s</code> is even.</p>
-<p>Then test the <code>forall</code> function by passing in your <code>is_even</code> function with the list <code>s = [1, 2, 3, 4, 5]</code>. The result should be <code>False</code>, because not <em>every</em> number in <code>s</code> is even.</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define a predicate that returns True if x is even</span>
-<span class="k">def</span> <span class="nf">is_even</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">pass</span> <span class="c1"># your code here</span>
-
-
-<span class="c1"># Returns True if p is True for all integers in s</span>
-<span class="k">def</span> <span class="nf">forall</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-    <span class="k">pass</span> <span class="c1"># your code here</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>You'll know you have correctly implemented <code>forall</code> if the following code block returns True for each test.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Test forall and is_even with a list containing only even numbers</span>
-<span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">forall</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
-
-
-<span class="c1"># Test forall and is_even with a list containing some numbers that are not even</span>
-<span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">forall</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-2.10">Exercise 2.10<a class="anchor-link" href="#Exercise-2.10">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Write a function called <code>forsome</code> that takes a predicate <code>p</code> and a list <code>s</code>. <code>forsome</code> should return <code>True</code> if <em>at least one</em> number in the list <code>s</code> has the property <code>p</code>.</p>
-<p>Test the <code>forsome</code> function by passing in your <code>is_even</code> function as the first argument and the list <code>s = [1, 3, 5, 7, 9]</code> as the second argument. The result should be <code>False</code>.</p>
-<p>Then test the <code>forsome</code> function by passing in your <code>is_even</code> function with the list <code>s = [1,2,3,4,5,6]</code>. The result should be <code>True</code>, because at least one number in <code>s</code> is even.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">forsome</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-    <span class="k">pass</span> <span class="c1"># your code here</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>You'll know you have correctly implemented <code>forsome</code> if the following code block returns True for each test.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Test forsome and is_even with a list containing only odd numbers</span>
-<span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">forsome</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>
-
-
-<span class="c1"># Test forsome with a list containing some numbers that are even</span>
-<span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">forsome</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-2.11">Exercise 2.11<a class="anchor-link" href="#Exercise-2.11">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In this problem, the domain is the integers <code>[-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]</code>.</p>
-<p>(Remember the <strong>domain</strong> of a variable in a predicate is the set of all possible values for the variable.)</p>
-<p>Determine the truth value of each of the following:</p>
-<ol>
-<li><p>$\forall x (\texttt{x is odd})$</p>
-</li>
-<li><p>$\exists x (\texttt{x is odd})$</p>
-</li>
-<li><p>$\forall x (\texttt{x is negative})$</p>
-</li>
-<li><p>$\exists x (\texttt{x is negative})$</p>
-</li>
-<li><p>$\forall x (x^2 - x \ne 1)$</p>
-</li>
-<li><p>$\forall x (x^2 &gt; 0)$</p>
-</li>
-<li><p>$\exists x (x^2 &gt; 0)$</p>
-</li>
-<li><p>$\forall x (x \le x + 1)$</p>
-</li>
-<li><p>$\exists x (x + x = 1)$</p>
-</li>
-<li><p>$\exists x (x + 2 = 1)$</p>
-</li>
-</ol>
-<p>Then use your <code>forall</code> and <code>forsome</code> functions to determine the truth value of each statement. You will need to write a predicate function for each one, similar to the <code>is_even</code> function you wrote previously. (You are encouraged to use <em>lambda</em> functions, but you may also use regular named functions)</p>
-<p>Here's an example of using a <em>lambda</em> function for the first one:</p>
-<p>$\forall x (\texttt{x is odd})$</p>
-<p>In Python:</p>
-
-<pre><code>  domain = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
-  print(forall(lambda x: x % 2, domain)) # prints True or False</code></pre>
 
 </div>
 </div>
@@ -13800,163 +13557,6 @@ so we have false $\rightarrow$ true.</li>
 
 <span class="k">def</span> <span class="nf">or1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">p</span> <span class="o">+</span> <span class="n">q</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">p</span> <span class="o">*</span> <span class="n">q</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.6">Sample Solution 2.6<a class="anchor-link" href="#Sample-Solution-2.6">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Somebody is older than 21.</li>
-<li>Everyone is older than 21.</li>
-<li>Someone is not older than 21.</li>
-<li>No one is older than 21.</li>
-<li>Someone (or some person) is a student.</li>
-<li>Everyone is a student.</li>
-<li>There is no student.</li>
-<li>There is someone who is not a student.</li>
-<li>Not all people are non-students.</li>
-<li>No one is a student.</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.7">Sample Solution 2.7<a class="anchor-link" href="#Sample-Solution-2.7">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>All friends are cool.</li>
-<li>Someone is a friend and is cool.</li>
-<li>Everyone is a friend and is cool.</li>
-<li>Some friends are cool. (Better than 'For some person, if that person is a friend, then that person is cool.')</li>
-<li>All students are from Nepal.</li>
-<li>Someone, if he/she is a student then he/she is from Nepal. (Better than 'For some person, if that person is a student, then that student is from Nepal.)</li>
-<li>Everyone is a student and is from Nepal.</li>
-<li>Some student is from Nepal.</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.8">Sample Solution 2.8<a class="anchor-link" href="#Sample-Solution-2.8">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>$\forall x\ C(x)$</li>
-<li>$\forall x\ \lnot P(x)$</li>
-<li>$\exists x\ (F(x) \land P(x))$</li>
-<li>$\forall x\ (F(x) \rightarrow C(x))$</li>
-<li>$\forall x\ C(x) \lor \exists x\ F(x)$</li>
-<li>$\lnot \exists x\ C(x) \land \forall x\ F(x)$</li>
-<li>$\exists x\ State(x) \land (\forall y\ State(y) \rightarrow \lnot ShareABorder(x, y))$</li>
-<li>$\exists x\ is\_an\_Error(x) \rightarrow (\exists y\ is\_an\_error\_Message(y) \land is\_Displayed(y))$</li>
-<li>$[\forall x\ (is\_a\_Program(x) \rightarrow has\_been\_Scanned(x))] \land [\exists x\ (is\_a\_Program(x) \land has\_a\_Virus(x))]$</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.9">Sample Solution 2.9<a class="anchor-link" href="#Sample-Solution-2.9">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_even</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="ow">not</span><span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">forall</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">p</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-            <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="kc">True</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.10">Sample Solution 2.10<a class="anchor-link" href="#Sample-Solution-2.10">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">forsome</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">p</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-            <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="kc">False</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.11">Sample Solution 2.11<a class="anchor-link" href="#Sample-Solution-2.11">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">domain</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;1. </span><span class="si">{</span><span class="n">forall</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">,</span> <span class="n">domain</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;2. </span><span class="si">{</span><span class="n">forsome</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">,</span> <span class="n">domain</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;3. </span><span class="si">{</span><span class="n">forall</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">domain</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;4. </span><span class="si">{</span><span class="n">forsome</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">domain</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;5. </span><span class="si">{</span><span class="n">forall</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">domain</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;6. </span><span class="si">{</span><span class="n">forall</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">domain</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;7. </span><span class="si">{</span><span class="n">forsome</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">domain</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;8. </span><span class="si">{</span><span class="n">forall</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">domain</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;9. </span><span class="si">{</span><span class="n">forsome</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="n">domain</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;10. </span><span class="si">{</span><span class="n">forsome</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="n">domain</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
