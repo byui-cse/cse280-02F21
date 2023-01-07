@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>homework-02</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>extras</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <style type="text/css">
   pre { line-height: 125%; }
@@ -13086,486 +13086,62 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Homework-2---More-Logic-and-Conditionals">Homework 2 - More Logic and Conditionals<a class="anchor-link" href="#Homework-2---More-Logic-and-Conditionals">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Note</strong>:
-Sample solutions are provided in order to help you <strong>learn</strong>. The purpose of these exercises is not to simply turn in the answers, but to take the time and effort to learn and understand the material. You are encouraged to work the problems first, then when you are satisfied that you have the correct answer, look at the sample solution and compare it with yours.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-2.1">Exercise 2.1<a class="anchor-link" href="#Exercise-2.1">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Let $p$ be the proposition &ldquo;I studied.&rdquo; and let $q$ be the proposition &ldquo;I got an A on the test.&rdquo;</p>
-<p>Express the following propositions as English sentences.</p>
-<ol>
-<li>$p \rightarrow q$</li>
-<li>$\lnot p \lor \lnot q$</li>
-<li>$\lnot p \rightarrow (p \lor q)$</li>
-<li>$\lnot p \rightarrow \lnot q$</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-2.2">Exercise 2.2<a class="anchor-link" href="#Exercise-2.2">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>True or false? Briefly explain your reasoning for each.</p>
-<ol>
-<li><p>If 2 + 2 = 4, then pigs can fly.</p>
-</li>
-<li><p>If 2 + 7 = 5, then Elvis is alive.</p>
-</li>
-<li><p>If pigs can fly, then dogs can't fly.</p>
-</li>
-<li><p>If dogs have four legs, then ostriches have two legs.</p>
-</li>
-<li><p>2 + 1 = 3 if and only if 1 + 2 = 3.</p>
-</li>
-<li><p>1 + 2 = 3 if and only if 3 + 1 = 6.</p>
-</li>
-<li><p>1 + 3 = 2 if and only if the earth is flat.</p>
-</li>
-<li><p>1 &lt; 2 if and only if 2 &lt; 3.</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-2.3">Exercise 2.3<a class="anchor-link" href="#Exercise-2.3">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Let $p$ be the proposition &ldquo;You applied for college admission.&rdquo; and let $q$ be the proposition &ldquo;You were accepted.&rdquo;</p>
-<p>Express the following English sentences as symbolic compound propositions using the logical <strong>conditional</strong> (or biconditional) connective.</p>
-<ol>
-<li>Your applying for college admission is necessary for your being accepted.</li>
-<li>Your being accepted is a sufficient condition for your applying for college admission.</li>
-<li>Your applying for college admission is necessary and sufficient for your being accepted.</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-2.4">Exercise 2.4<a class="anchor-link" href="#Exercise-2.4">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Write Python functions to implement the <strong>conditional</strong> operator "$\rightarrow$" (implies) and the <strong>biconditional</strong> operator "$\leftrightarrow$" (if and only if, frequently written as "iff").</p>
-<p>In other words, complete these functions:</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">implies</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Implements the conditional operator -&gt;</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">pass</span> <span class="c1"># replace with your code</span>
-
-
-<span class="k">def</span> <span class="nf">iff</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Implements the biconditional operator &lt;--&gt;</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">pass</span> <span class="c1"># replace with your code</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Then use Python to print a truth table for $p \rightarrow q$ and $p \leftrightarrow q$ using your <code>implies</code> and <code>iff</code> functions to verify they are working correctly. The truth table should look something like this:</p>
-<table>
-<thead><tr>
-<th>p</th>
-<th>q</th>
-<th>p-&gt;q</th>
-<th>p&lt;-&gt;q</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>T</td>
-<td>T</td>
-<td>T</td>
-<td>T</td>
-</tr>
-<tr>
-<td>T</td>
-<td>F</td>
-<td>F</td>
-<td>F</td>
-</tr>
-<tr>
-<td>F</td>
-<td>T</td>
-<td>T</td>
-<td>F</td>
-</tr>
-<tr>
-<td>F</td>
-<td>F</td>
-<td>T</td>
-<td>T</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-2.5">Exercise 2.5<a class="anchor-link" href="#Exercise-2.5">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The Boolean operators <code>and</code>, <code>or</code>, and <code>not</code> are built into Python. This is an exercise in implementing these operators arithmetically (i.e., using <code>-</code>, <code>+</code>, and <code>*</code>).</p>
-<p>Your task is to implement the <code>not1</code>, <code>or1</code>, and <code>and1</code> functions below, <strong>arithmetically</strong> (i.e., do <em>not</em> the built-in Python <code>and</code>, <code>or</code>, <code>not</code>, or <code>if</code>). Use <strong>only</strong> the operators +, -, and *. The inputs to these functions will be zeros or ones only, with zero representing False and one representing True. The outputs to these functions will be zero or one only (rather than True or False).</p>
-<p>You'll know you got it right if the resulting test code returns True for all three functions.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">not1</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
-    <span class="k">pass</span> <span class="c1"># your code here</span>
-
-<span class="k">def</span> <span class="nf">and1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
-    <span class="k">pass</span> <span class="c1"># your code here</span>
-
-<span class="k">def</span> <span class="nf">or1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
-    <span class="k">pass</span> <span class="c1"># your code here</span>
-
-
-<span class="c1"># Returns a bit string representing the final column</span>
-<span class="c1"># in a truth table for the given function.</span>
-<span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">function</span><span class="p">):</span>
-    <span class="c1"># handle functions with 1 argument</span>
-    <span class="k">if</span> <span class="n">function</span><span class="o">.</span><span class="vm">__code__</span><span class="o">.</span><span class="n">co_argcount</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">p</span><span class="p">))</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
-
-    <span class="c1"># otherwise assume 2 arugments</span>
-    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">))</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">(</span><span class="n">not1</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;10&#39;</span><span class="p">)</span> <span class="c1"># Test not1 function</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">(</span><span class="n">and1</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;0001&#39;</span><span class="p">)</span> <span class="c1"># Test and1 function</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">(</span><span class="n">or1</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;0111&#39;</span><span class="p">)</span> <span class="c1"># Test or1 function</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-2.6">Exercise 2.6<a class="anchor-link" href="#Exercise-2.6">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Using the operations you created in the previous exercise (<code>and1</code>, <code>or1</code>, and <code>not1</code>), use Python to generate a truth table for the following propositions:</p>
-<ol>
-<li>$p \land q$</li>
-<li>$p \lor q$</li>
-<li>$\lnot p \lor q$</li>
-<li>$p \land \lnot q$</li>
-</ol>
-<p>Verify your <code>and1</code>, <code>or1</code>, and <code>not1</code> functions are working correctly by manually checking each truth table.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-2.7">Exercise 2.7<a class="anchor-link" href="#Exercise-2.7">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Given the conditional statement $p \rightarrow q$, write each of the following compound propositions:</p>
-<ol>
-<li>Inverse</li>
-<li>Converse</li>
-<li>Contrapositive</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-2.8">Exercise 2.8<a class="anchor-link" href="#Exercise-2.8">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Explore the relationship between Conditional, Converse, Inverse, and Contrapositive using truth tables. You may construct them by hand, by using LaTeX or Markdown, or by using Python.</p>
-<p>Construct a truth table showing the conditional, inverse, converse, and contrapositive. Then answer the following questions.</p>
-<ol>
-<li><p>Based on the truth table, which of them are logically equivalent?</p>
-</li>
-<li><p>Is this logical equivalence true? $p \rightarrow q \equiv \lnot p \lor q$</p>
-</li>
-<li><p>Is the negation of a conditional equivalent to negating each of the terms? In other words is the following equivalence true?</p>
-<p>$\lnot(p \rightarrow q) \equiv \lnot p \rightarrow \lnot q$</p>
-</li>
-<li><p>What is an equivalent statement to $\lnot (p \rightarrow q)$? (Use the equivalence in #2 and De Morgan's Laws to help you)</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-2.9">Exercise 2.9<a class="anchor-link" href="#Exercise-2.9">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Give the inverse, contrapositive, and converse for each of the following statements:</p>
-<ol>
-<li><p>If Bob got an A on the final exam, then Bob passed the class.</p>
-</li>
-<li><p>If you complete your homework, then you will pass the exam.</p>
-</li>
-<li><p>If you do not study, then you will not pass the exam.</p>
-</li>
-<li><p>If you are 46" tall, then you can ride the rollercoaster.</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-2.10">Exercise 2.10<a class="anchor-link" href="#Exercise-2.10">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Given the following propositions:</p>
-<p>$p$: A rider is at least 12 years old.  \
-$q$: A rider is at least 18 years old.  \
-$r$: A rider is over 48" tall.</p>
-<p>Translate each English sentence into a logical expression. Then negate the entire logical expression using parenthesis and the negation operation. Apply De Morgan's law to the resulting expression and translate the final logical expression back into English. Show all steps.</p>
-<ol>
-<li><p>A rider is at least 12 years old and over 48" tall.</p>
-</li>
-<li><p>A rider is at least 18 years old or is over 48" tall.</p>
-</li>
-<li><p>A rider is at least 18 years old and is 48" tall or less.</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h2 id="Sample-Solutions">Sample Solutions<a class="anchor-link" href="#Sample-Solutions">&#182;</a></h2><p><strong>Note</strong>:
-Sample solutions are provided in order to help you <strong>learn</strong>. The purpose of these exercises is not to simply turn in the answers, but to take the time and effort to learn and understand the material. You are encouraged to work the problems first, then when you are satisfied that you have the correct answer, look at the sample solution and compare it with yours.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.1">Sample Solution 2.1<a class="anchor-link" href="#Sample-Solution-2.1">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>If I studied then I got an A on the test.</li>
-<li>I did not study or I did not get an A on the test.</li>
-<li>If I didn't study then I studied or I got an A on the test.</li>
-<li>If I did not study then I did not get an A on the test.</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.2">Sample Solution 2.2<a class="anchor-link" href="#Sample-Solution-2.2">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>This is false, because "2 + 2 = 4" is true but
-"pigs can fly" is false.</li>
-<li>Both parts are false, so the conditional is true.</li>
-<li>This is true, because pigs can't fly, and neither can dogs,
-so we have false $\rightarrow$ true.</li>
-<li>We have true $\rightarrow$ true, so this is true.</li>
-<li>As we have true $\leftrightarrow$ true, this is true.</li>
-<li>As we have true $\leftrightarrow$ false, this is false.</li>
-<li>As we have false $\leftrightarrow$ false, this is true.</li>
-<li>Again we have true $\rightarrow$ true, so true.</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.3">Sample Solution 2.3<a class="anchor-link" href="#Sample-Solution-2.3">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>$p \leftarrow q$ (or $q \rightarrow p$)</li>
-<li>$q \rightarrow p$</li>
-<li>$p \leftrightarrow q$</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.4">Sample Solution 2.4<a class="anchor-link" href="#Sample-Solution-2.4">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">implies</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">conditional</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
     <span class="k">return</span> <span class="ow">not</span> <span class="n">p</span> <span class="ow">or</span> <span class="n">q</span>
 
-<span class="c1"># Another way:</span>
-<span class="k">def</span> <span class="nf">implies</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">q</span> <span class="k">if</span> <span class="n">p</span> <span class="k">else</span> <span class="kc">True</span>
+<span class="k">def</span> <span class="nf">biconditional</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">conditional</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span> <span class="ow">and</span> <span class="n">conditional</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">xor</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">p</span> <span class="k">if</span> <span class="n">q</span> <span class="k">else</span> <span class="n">p</span>
 
-<span class="c1"># Another way:</span>
-<span class="k">def</span> <span class="nf">implies</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">p</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">q</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
+<span class="k">def</span> <span class="nf">not1</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">p</span>
 
-<span class="k">def</span> <span class="nf">iff</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">implies</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span> <span class="ow">and</span> <span class="n">implies</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">and1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">p</span> <span class="o">*</span> <span class="n">q</span>
 
+<span class="k">def</span> <span class="nf">or1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">p</span> <span class="o">+</span> <span class="n">q</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">p</span> <span class="o">*</span> <span class="n">q</span><span class="p">)</span>
 
 <span class="n">operators</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;implies&#39;</span><span class="p">:</span> <span class="s1">&#39;⟶&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;iff&#39;</span><span class="p">:</span> <span class="s1">&#39;⟷&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;and1&#39;</span><span class="p">:</span> <span class="s1">&#39;∧&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;or1&#39;</span><span class="p">:</span> <span class="s1">&#39;∨&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;not1&#39;</span><span class="p">:</span> <span class="s1">&#39;¬&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;xor&#39;</span><span class="p">:</span> <span class="s1">&#39;⊕&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;conditional&#39;</span><span class="p">:</span> <span class="s1">&#39;⟶&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;biconditional&#39;</span><span class="p">:</span> <span class="s1">&#39;⟷&#39;</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="c1"># Print a truth table</span>
 <span class="k">def</span> <span class="nf">print_truth_table</span><span class="p">(</span><span class="n">operation</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p       q       p </span><span class="si">{</span><span class="n">operators</span><span class="p">[</span><span class="n">operation</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span><span class="si">}</span><span class="s2"> q&quot;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]:</span>
-        <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="n">q</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="n">operation</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">)</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p    q    p </span><span class="si">{</span><span class="n">operators</span><span class="p">[</span><span class="n">operation</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span><span class="si">}</span><span class="s2"> q&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">    </span><span class="si">{</span><span class="n">q</span><span class="si">}</span><span class="s1">    </span><span class="si">{</span><span class="n">operation</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">)</span><span class="si">:</span><span class="s1">d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">()</span>
 
-<span class="n">print_truth_table</span><span class="p">(</span><span class="n">implies</span><span class="p">)</span>
-<span class="n">print_truth_table</span><span class="p">(</span><span class="n">iff</span><span class="p">)</span>
+<span class="n">print_truth_table</span><span class="p">(</span><span class="n">conditional</span><span class="p">)</span>
+<span class="n">print_truth_table</span><span class="p">(</span><span class="n">biconditional</span><span class="p">)</span>
+<span class="n">print_truth_table</span><span class="p">(</span><span class="n">xor</span><span class="p">)</span>
+<span class="n">print_truth_table</span><span class="p">(</span><span class="n">and1</span><span class="p">)</span>
+<span class="n">print_truth_table</span><span class="p">(</span><span class="n">or1</span><span class="p">)</span>
+
+
+
+<span class="c1"># result = [(p, q, conditional(p,q)) for p in [True, False] for q in [True, False]]</span>
+<span class="c1"># print(&#39;\n&#39;.join(map(lambda x: str(x), result)))</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.5">Sample Solution 2.5<a class="anchor-link" href="#Sample-Solution-2.5">&#182;</a></h3>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13580,6 +13156,30 @@ so we have false $\rightarrow$ true.</li>
 
 <span class="k">def</span> <span class="nf">or1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">p</span> <span class="o">+</span> <span class="n">q</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">p</span> <span class="o">*</span> <span class="n">q</span><span class="p">)</span>
+
+
+
+<span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="c1"># (p ∧ q) ∨ ¬r</span>
+    <span class="k">return</span> <span class="n">or1</span><span class="p">(</span><span class="n">and1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">),</span> <span class="n">not1</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">f2</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="c1"># p ∧ (q ∨ ¬r)</span>
+    <span class="k">return</span> <span class="n">and1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">or1</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">not1</span><span class="p">(</span><span class="n">r</span><span class="p">)))</span>
+
+<span class="k">def</span> <span class="nf">f3</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="c1"># p ∨ (q ∧ r)</span>
+    <span class="k">return</span> <span class="n">or1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">and1</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">))</span>
+
+
+
+<span class="k">def</span> <span class="nf">personality</span><span class="p">(</span><span class="n">function</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">))</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">personality</span><span class="p">(</span><span class="n">f1</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;10101011&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">personality</span><span class="p">(</span><span class="n">f2</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;00001011&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">personality</span><span class="p">(</span><span class="n">f3</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;00011111&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13590,7 +13190,23 @@ so we have false $\rightarrow$ true.</li>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.6">Sample Solution 2.6<a class="anchor-link" href="#Sample-Solution-2.6">&#182;</a></h3>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercise-6.5.3">Exercise 6.5.3<a class="anchor-link" href="#Exercise-6.5.3">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Find the smallest primes such that $n^{2} &lt; p &lt; (n + 1)^{2}$ for the first 100 pairs
+of consecutive squares. That is, find the smallest primes in the ranges (1, 4), (4, 9), (9, 16), etc.</p>
+
 </div>
 </div>
 </div>
@@ -13599,33 +13215,25 @@ so we have false $\rightarrow$ true.</li>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Print a truth table for 1.</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p       q       p and q&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="n">q</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="nb">bool</span><span class="p">(</span><span class="n">and1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Hint {display-mode: &quot;form&quot;}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Find them all with the help of a small amount of code.&#39;</span><span class="p">)</span>
+</pre></div>
 
-<span class="c1"># Print a truth table for 2.</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p       q       p or q&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="n">q</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="nb">bool</span><span class="p">(</span><span class="n">or1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
+    </div>
+</div>
+</div>
 
-<span class="c1"># Print a truth table for 3.</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p       q       not p or q&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="n">q</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="nb">bool</span><span class="p">(</span><span class="n">or1</span><span class="p">(</span><span class="n">not1</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="n">q</span><span class="p">))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="c1"># Print a truth table for 4.</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p       q       p and not q&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="n">q</span><span class="si">!s:</span><span class="s1">&lt;8</span><span class="si">}{</span><span class="nb">bool</span><span class="p">(</span><span class="n">and1</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">not1</span><span class="p">(</span><span class="n">q</span><span class="p">)))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Answer {display-mode: &quot;form&quot;}</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">```[2,5,11,17,29,37,53,67,83,101,127,149,173,197,227,257,293,331,367,401,443,487,541,577,631,677,733,787,853,907,967,1031,1091,1163,1229,1297,1373,1447,1523,1601,1693,1777,1861,1949,2027,2129,2213,2309,2411,2503,2609,2707,2819,2917,3037,3137,3251,3371,3491,3607,3727,3847,3989,4099,4229,4357,4493,4637,4783,4903,5051,5189,5333,5477,5639,5779,5939,6089,6247,6421,6563,6733,6899,7057,7229,7411,7573,7753,7927,8101,8287,8467,8663,8837,9029,9221,9413,9613,9803,10007]```</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13636,153 +13244,290 @@ so we have false $\rightarrow$ true.</li>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.7">Sample Solution 2.7<a class="anchor-link" href="#Sample-Solution-2.7">&#182;</a></h3>
+<h3 id="Exercise-6.5.4">Exercise 6.5.4<a class="anchor-link" href="#Exercise-6.5.4">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Inverse: $\lnot p \rightarrow \lnot q$</li>
-<li>Converse: $q \rightarrow p $</li>
-<li>Contrapositive: $\lnot q \rightarrow \lnot p$</li>
-</ol>
+<p>How many 7-digit primes have the form $n^{2} + 1$? What are they?</p>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Hint {display-mode: &quot;form&quot;}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">A working prime sieve or an already-generated list of big enough primes, plus a</span>
+<span class="s1">little code, will reveal the answer.</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Answer {display-mode: &quot;form&quot;}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are 204 primes of this form between 1008017 and 9985601 inclusive.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.8">Sample Solution 2.8<a class="anchor-link" href="#Sample-Solution-2.8">&#182;</a></h3>
+<h3 id="Exercise-6.10.2">Exercise 6.10.2<a class="anchor-link" href="#Exercise-6.10.2">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Truth table:</p>
-<table>
-<thead><tr>
-<th style="text-align:center">$p$</th>
-<th style="text-align:center">$q$</th>
-<th style="text-align:center">$$p \rightarrow q$$</th>
-<th style="text-align:center">$$\lnot p \rightarrow \lnot q$$</th>
-<th style="text-align:center">$$q \rightarrow p $$</th>
-<th style="text-align:center">$$\lnot q \rightarrow \lnot p$$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-</tr>
-<tr>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-</tr>
-<tr>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-</tr>
-<tr>
-<td style="text-align:center">F</td>
-<td style="text-align:center">F</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">T</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li><p>Conditional and its contrapositive: $p \rightarrow q \equiv \lnot q \rightarrow \lnot p$</p>
-<p>Inverse and Converse: $\lnot p \rightarrow \lnot q \equiv q \rightarrow p$</p>
-</li>
-<li><p>True. $\lnot p \lor q$ is logically equivalent to $p \rightarrow q$. We can show this using a truth table.</p>
-</li>
-<li><p>False.  $\lnot(p \rightarrow q)$ is NOT the same as $ \lnot p \rightarrow \lnot q$. We can show this using a truth table.</p>
-</li>
-<li><p>An equivalent statement to $\lnot(p \rightarrow q)$ is $\lnot (\lnot p \lor q)$, which we can simplify using De Morgan's Laws to $p \land \lnot q$.</p>
-</li>
-</ol>
+<p>Find if there is an integer-pair solution to $91x + 11y = 1$ in the range from $-49$ to $50$.</p>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">forsomeforsome</span><span class="p">(</span><span class="n">predicate</span><span class="p">,</span> <span class="n">domainX</span><span class="p">,</span> <span class="n">domainY</span><span class="p">):</span>
+  <span class="k">return</span> <span class="nb">any</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">any</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">predicate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span>
+                 <span class="n">domainY</span><span class="p">)),</span> <span class="n">domainX</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicate</span> <span class="o">=</span> <span class="c1"># your predicate goes here</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">forsomeforsome</span><span class="p">(</span><span class="n">predicate</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">49</span><span class="p">,</span> <span class="mi">51</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">49</span><span class="p">,</span> <span class="mi">51</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Hint {display-mode: &quot;form&quot;}</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">Think about how a straightforward translation of the equation $91x + 11y = 1$</span>
+<span class="s1">could be written as a ```lambda``` predicate suitable for passing to</span>
+<span class="s1">```forsomeforsome``` in the given code.</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Answer {display-mode: &quot;form&quot;}</span>
+<span class="n">predicate</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">91</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">11</span> <span class="o">*</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="c1"># print(forsomeforsome(predicate, domain, domain))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">forsomeforsome</span><span class="p">(</span><span class="n">predicate</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">49</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">49</span><span class="p">,</span><span class="mi">50</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.9">Sample Solution 2.9<a class="anchor-link" href="#Sample-Solution-2.9">&#182;</a></h3>
+<h3 id="Exercise-6.10.3">Exercise 6.10.3<a class="anchor-link" href="#Exercise-6.10.3">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li><p>If Bob got an A on the final exam, then Bob passed the class.</p>
-<p>Inverse: If Bob did not get an A on the final exam, then Bob did not pass the class.\
- Converse: If Bob passed the class, then Bob got an A on the final exam. \
- Contrapositive: If Bob did not pass the class, then Bob did not get an A on the final exam.</p>
-</li>
-<li><p>If you complete your homework, then you will pass the exam.</p>
-<p>Inverse: If you did not complete your homework, then you will not pass the exam.\
- Converse: If you passed the exam, then you did completed your homework. \
- Contrapositive: If you did not pass the exam, then you did not do your homework.</p>
-</li>
-<li><p>If you do not study, then you will not pass the exam.</p>
-<p>Inverse: If you study, then you will pass the exam. \
- Converse: If you did not pass the exam, then you did not study. \
- Contrapositive: If you passed the exam, then you did study.</p>
-</li>
-<li><p>If you are 46" tall, then you can ride the rollercoaster.</p>
-<p>Inverse: If you are not 46" tall, then you can not ride the rollercoaster. \
- Converse: If you can ride the rollercoaster, then you are 46" tall. \
- Contrapositive: If you can not ride the rollercoaster, then you are not 46" tall.</p>
-</li>
-</ol>
+<p>What is the largest <strong>unfillable</strong> order of chicken nuggets that only come 5 to
+a box or 7 to a box, with no partial boxes allowed? Note that negative boxes
+aren't allowed either, but zero boxes are, hence every multiple of 5 or 7 is a
+fillable number.</p>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Hint {display-mode: &quot;form&quot;}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">Get your hands dirty. Try lots of numbers and look for patterns.</span>
+
+<span class="s1">Functions from (or like those in) the previous two exercises might be helpful.</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Answer {display-mode: &quot;form&quot;}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;23 nuggets is the largest unfillable order.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">([</span><span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">pair</span><span class="p">:</span> <span class="mi">5</span><span class="o">*</span><span class="n">pair</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">7</span><span class="o">*</span><span class="n">pair</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)])])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sample-Solution-2.10">Sample Solution 2.10<a class="anchor-link" href="#Sample-Solution-2.10">&#182;</a></h3>
+<h3 id="Exercise-7.3">Exercise 7.3<a class="anchor-link" href="#Exercise-7.3">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li><p>$p \land r$    \
-Negated: $(\lnot p \lor \lnot r)$    \
-English: A rider is not older than 12 years old or is not taller than 48".    \</p>
-</li>
-<li><p>$q \lor r$    \
-Negated: $(\lnot q \land \lnot r)$    \
-English: A rider is not older than 18 years old and is not taller than 48".    \</p>
-</li>
-<li><p>$q \land \lnot r$    \
-Negated: $(\lnot q \lor r)$    \
-English: A rider is not older than 18 years old or is taller than 48".</p>
-</li>
-</ol>
+<p>Implement a recursive version of Euclid's GCD algorithm using the GCD Theorem as a guide. The GCD Theorem says:</p>
+<p>Let x and y be two positive integers such that x ≠ 0. Then gcd(x, y) = gcd(y mod x, x).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Euclid&#39;s GCD Algorithm recursively</span>
+
+<span class="k">def</span> <span class="nf">rgcd</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="c1"># your code here</span>
+    <span class="k">pass</span>
+
+
+<span class="c1"># This should print True if your gcd function is correct</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rgcd</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="mi">25</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">27</span><span class="p">,</span> <span class="mi">36</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">36</span><span class="p">,</span> <span class="mi">27</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">39</span><span class="p">,</span> <span class="mi">93</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sample-Solution-7.3">Sample Solution 7.3<a class="anchor-link" href="#Sample-Solution-7.3">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Euclid&#39;s GCD Algorithm recursively</span>
+
+<span class="k">def</span> <span class="nf">rgcd</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">y</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rgcd</span><span class="p">(</span><span class="n">y</span> <span class="o">%</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rgcd</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="mi">25</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">27</span><span class="p">,</span> <span class="mi">36</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">36</span><span class="p">,</span> <span class="mi">27</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span>
+      <span class="ow">and</span> <span class="n">rgcd</span><span class="p">(</span><span class="mi">39</span><span class="p">,</span> <span class="mi">93</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="For-Counting">For Counting<a class="anchor-link" href="#For-Counting">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To do:</p>
+<p>Implement permutation P(n,k)
+    from math import factorial</p>
+<p>Implement combination C(n,k)</p>
+<p>Implment multichoose MC(n,k)</p>
 
 </div>
 </div>
