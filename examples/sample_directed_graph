@@ -1,0 +1,16 @@
+
+digraph {
+    layout=neato;
+    label="Sample Graph";
+    labeljust=l;
+    labelloc=t;
+    edge [arrowsize=0.75]; # specifies the arrowhead size
+    node [shape=circle; fixedsize=true; width=0.30]; # specifies the node size/shape
+    a->b;
+    b->a;
+    a->c;
+    a->d;
+    b->c;
+    d->d;
+  }
+ 
