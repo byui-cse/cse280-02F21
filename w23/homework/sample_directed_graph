@@ -1,0 +1,13 @@
+
+digraph {
+    layout=neato;
+    edge [arrowsize=0.75];
+    node [shape=circle; fixedsize=true; width=0.30];
+    a->b;
+    b->a;
+    a->c;
+    a->d;
+    b->c;
+    d->d;
+  }
+ 

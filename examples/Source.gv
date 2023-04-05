@@ -1,0 +1,14 @@
+
+graph tree { 
+  layout=dot;
+  node [shape=circle];
+  edge [len=2.0];
+  a--b [label=" 2"];
+  b--c [label=" 3"];
+  a--e [label=" 3"];
+  e--f [label=" 1"];
+  f--g [label=" 3"];
+  g--h [label=" 1"];
+  c--d [label=" 4"];
+
+}
