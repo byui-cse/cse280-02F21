@@ -57,6 +57,11 @@ body {
 	margin-left: 20px;
 }
 
+#courseTitle h1 a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
 #courseTitle .logo {
 	width: 64px;
 	display: inline-block;
