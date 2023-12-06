@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Course Slides
+layout: null
 permalink: course-slides.html
 ---
 <!DOCTYPE html>
@@ -26,7 +25,7 @@ permalink: course-slides.html
             <ul>
                 {% for file in site.static_files %}
                     {% if file.path contains 'slides/' and file.name contains '.pdf' %}
-                    <li><a href="{{ file.path }}">{{ file.name }}</a></li>
+                    <li><p><a href="./{{ file.path }}">{{ file.name }}</a></p></li>
                     {% endif %}
                 {% endfor %}
             </ul>
